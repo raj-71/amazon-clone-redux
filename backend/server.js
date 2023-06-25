@@ -6,6 +6,8 @@ import mongoose from 'mongoose';
 import userRoutes from './routes/userRoutes.js';
 import bodyParser from 'body-parser';
 
+const port = process.env.PORT || 5000;
+
 dotenv.config();
 
 const mongodbUrl = config.MONGODB_URL;
@@ -33,8 +35,6 @@ app.get('/api/products', (req, res) => {
     res.send(data.products);
 });
 
-
-
-app.listen(5000, () => { 
-    console.log('Server started at http://localhost:5000')
+app.listen(port, () => { 
+    console.log(`Server started on port: ${port}`);
 });
