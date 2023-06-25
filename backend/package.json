@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "build": "babel server.js -d build",
-    "start": "nodemon --watch backend --exec babel-node server.js"
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
